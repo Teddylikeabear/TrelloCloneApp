@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             Shell.NavBarIsVisible="False"
+             x:Class="TrelloCloneApp.CardsPage"
+             Title="CardsPage"
+             BackgroundColor="Black">
+
+    <ScrollView>
+        <VerticalStackLayout Spacing="20" Padding="10">
+            <!-- To-Do Section -->
+            <VerticalStackLayout>
+                <Label Text="To-Do" FontSize="16" TextColor="White" FontAttributes="Bold" />
+                <CollectionView ItemsSource="{Binding ToDoTasks}" Margin="0,5,0,0">
+                    <CollectionView.ItemsLayout>
+                        <GridItemsLayout Orientation="Vertical" Span="1" VerticalItemSpacing="10" />
+                    </CollectionView.ItemsLayout>
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate>
+                            <Frame BackgroundColor="#333" Padding="10" CornerRadius="12">
+                                <VerticalStackLayout Spacing="5">
+                                    <Label Text="{Binding Title}" FontSize="14" TextColor="White" FontAttributes="Bold" />
+                                    <Label Text="{Binding Status}" FontSize="12" TextColor="LightGray" />
+                                    <HorizontalStackLayout Spacing="5">
+                                        <Frame CornerRadius="15" HeightRequest="30" WidthRequest="30" BackgroundColor="#555">
+                                            <Label Text="{Binding MemberInitial}" TextColor="White" HorizontalOptions="Center" VerticalOptions="Center" FontSize="12" />
+                                        </Frame>
+                                    </HorizontalStackLayout>
+                                </VerticalStackLayout>
+                            </Frame>
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+                </CollectionView>
+            </VerticalStackLayout>
+
+            <!-- In-Progress Section -->
+            <VerticalStackLayout>
+                <Label Text="In Progress" FontSize="16" TextColor="White" FontAttributes="Bold" />
+                <CollectionView ItemsSource="{Binding InProgressTasks}" Margin="0,5,0,0">
+                    <CollectionView.ItemsLayout>
+                        <GridItemsLayout Orientation="Vertical" Span="1" VerticalItemSpacing="10" />
+                    </CollectionView.ItemsLayout>
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate>
+                            <Frame BackgroundColor="#333" Padding="10" CornerRadius="12">
+                                <VerticalStackLayout Spacing="5">
+                                    <Label Text="{Binding Title}" FontSize="14" TextColor="White" FontAttributes="Bold" />
+                                    <Label Text="{Binding Status}" FontSize="12" TextColor="LightGray" />
+                                    <HorizontalStackLayout Spacing="5">
+                                        <Frame CornerRadius="15" HeightRequest="30" WidthRequest="30" BackgroundColor="#555">
+                                            <Label Text="{Binding MemberInitial}" TextColor="White" HorizontalOptions="Center" VerticalOptions="Center" FontSize="12" />
+                                        </Frame>
+                                    </HorizontalStackLayout>
+                                </VerticalStackLayout>
+                            </Frame>
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+                </CollectionView>
+            </VerticalStackLayout>
+
+            <!-- Done Section -->
+            <VerticalStackLayout>
+                <Label Text="Done" FontSize="16" TextColor="White" FontAttributes="Bold" />
+                <CollectionView ItemsSource="{Binding DoneTasks}" Margin="0,5,0,0">
+                    <CollectionView.ItemsLayout>
+                        <GridItemsLayout Orientation="Vertical" Span="1" VerticalItemSpacing="10" />
+                    </CollectionView.ItemsLayout>
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate>
+                            <Frame BackgroundColor="#333" Padding="10" CornerRadius="12">
+                                <VerticalStackLayout Spacing="5">
+                                    <Label Text="{Binding Title}" FontSize="14" TextColor="White" FontAttributes="Bold" />
+                                    <Label Text="{Binding Status}" FontSize="12" TextColor="LightGray" />
+                                    <HorizontalStackLayout Spacing="5">
+                                        <Frame CornerRadius="15" HeightRequest="30" WidthRequest="30" BackgroundColor="#555">
+                                            <Label Text="{Binding MemberInitial}" TextColor="White" HorizontalOptions="Center" VerticalOptions="Center" FontSize="12" />
+                                        </Frame>
+                                    </HorizontalStackLayout>
+                                </VerticalStackLayout>
+                            </Frame>
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+                </CollectionView>
+            </VerticalStackLayout>
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>

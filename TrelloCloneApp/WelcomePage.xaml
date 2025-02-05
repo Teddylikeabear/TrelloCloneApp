@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TrelloCloneApp.WelcomePage"
+             Shell.NavBarIsVisible="False"
+             BackgroundColor="Black"
+             Title="WelcomePage">
+
+    <Grid>
+        <VerticalStackLayout HorizontalOptions="Center" VerticalOptions="Center" Spacing="20">
+            <!--Logo -->
+            <Image Source="trellologo.png" HeightRequest="50"/>
+            <Image Source="trello2.png" HeightRequest="300"/>
+
+            <!-- image description -->
+            <Label Text="Move teamwork forward - even on the go"
+                  TextColor="White"
+                  HorizontalTextAlignment="Center"
+                  FontSize="16" />
+
+            <!-- Buttons -->
+            <Button Text="Sign up"
+                   Command="{Binding SignUpCommand}"
+                   BackgroundColor="Gray"
+                   TextColor="White"
+                   WidthRequest="250"
+                   CornerRadius="25"
+                   Clicked="OnSignUpClicked"
+                   />
+
+            <Button Text="Log in"
+                   Command="{Binding  LoginCommand}"
+                   BackgroundColor="Gray"
+                   TextColor="White"
+                   BorderWidth="1"
+                   WidthRequest="250"
+                   CornerRadius="25"
+                   Clicked="OnLoginClicked"
+                   />
+
+            <!-- Footer -->
+
+            <Label Text="By signing up, you agree to the Terms of Service and Privacy Policy."
+                  TextColor="White"
+                  HorizontalTextAlignment="Center"
+                  FontSize="12" />
+
+            <Label Text="Contact support"
+                    TextColor="White"
+                    HorizontalTextAlignment="Center"
+                    FontSize="12" />
+
+        </VerticalStackLayout>
+
+    </Grid>
+</ContentPage>

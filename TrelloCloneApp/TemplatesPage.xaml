@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             Shell.NavBarIsVisible="False"
+             x:Class="TrelloCloneApp.TemplatesPage"
+             BackgroundColor="black"
+             Title="TemplatesPage">
+
+    <ScrollView>
+            <VerticalStackLayout Padding="16" Spacing="24">
+                <!-- Filter Chips -->
+                <ScrollView Orientation="Horizontal">
+                    <StackLayout Orientation="Horizontal" Spacing="12">
+                        <Button Text="All" BackgroundColor="#1D1D1D" TextColor="White" CornerRadius="20" />
+                        <Button Text="Business" BackgroundColor="#1D1D1D" TextColor="White" CornerRadius="20" />
+                        <Button Text="Design" BackgroundColor="#1D1D1D" TextColor="White" CornerRadius="20" />
+                        <Button Text="Education" BackgroundColor="#1D1D1D" TextColor="White" CornerRadius="20" />
+                        <Button Text="Engineering" BackgroundColor="#1D1D1D" TextColor="White" CornerRadius="20" />
+                    </StackLayout>
+                </ScrollView>
+
+                <!-- Template Cards -->
+                <VerticalStackLayout Spacing="16">
+                    <!-- Template 1 -->
+                    <Frame CornerRadius="10" HasShadow="True" BackgroundColor="#004FBA" Padding="12">
+                        <VerticalStackLayout>
+                            <Label Text="Basic Board" TextColor="White" FontAttributes="Bold" FontSize="16" />
+                            <Label Text="Made by Trello" TextColor="White" FontSize="12" />
+                        </VerticalStackLayout>
+                    </Frame>
+
+                    <!-- Template 2 -->
+                    <Frame CornerRadius="10" HasShadow="True" BackgroundColor="#B845F8" Padding="12">
+                        <VerticalStackLayout>
+                            <Label Text="Project Management" TextColor="White" FontAttributes="Bold" FontSize="16" />
+                            <Label Text="Made by Trello - Good for teams" TextColor="White" FontSize="12" />
+                        </VerticalStackLayout>
+                    </Frame>
+
+                    <!-- Template 3 -->
+                    <Frame CornerRadius="10" HasShadow="True" BackgroundColor="#3CD4FC" Padding="12">
+                        <VerticalStackLayout>
+                            <Label Text="Kanban Template" TextColor="White" FontAttributes="Bold" FontSize="16" />
+                            <Label Text="Made by Trello - Good for teams" TextColor="White" FontSize="12" />
+                        </VerticalStackLayout>
+                    </Frame>
+
+                    <!-- Template 4 -->
+                    <Frame CornerRadius="10" HasShadow="True" BackgroundColor="#F9A825" Padding="12">
+                        <VerticalStackLayout>
+                            <Label Text="Agile Board Template" TextColor="White" FontAttributes="Bold" FontSize="16" />
+                            <Label Text="Trello" TextColor="White" FontSize="12" />
+                        </VerticalStackLayout>
+                    </Frame>
+                </VerticalStackLayout>
+            </VerticalStackLayout>
+        </ScrollView>
+   
+
+</ContentPage>

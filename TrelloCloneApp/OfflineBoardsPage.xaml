@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             Shell.NavBarIsVisible="False"
+             x:Class="TrelloCloneApp.OfflineBoardsPage"
+             Title="OfflineBoardsPage"
+             BackgroundColor="#1E1E1E">
+
+    <StackLayout Padding="10" Spacing="20">
+        <!-- Info Section -->
+        <Frame BackgroundColor="#292929" CornerRadius="10" Padding="15">
+            <Grid RowDefinitions="Auto, Auto, Auto" ColumnDefinitions="*">
+                <!-- Title -->
+                <Label Grid.Row="0" Grid.Column="0" 
+               Text="Go offline with Trello"
+               FontSize="16"
+               FontAttributes="Bold"
+               TextColor="White"/>
+
+                <!-- Description -->
+                <Label Grid.Row="1" Grid.Column="0"
+               Text="Select the boards you'd like to view and edit even without a connection. Changes will automatically sync when you reconnect."
+               FontSize="14"
+               TextColor="#AAAAAA"
+               Margin="0,5,0,0"/>
+
+                <!-- Button -->
+                <Button Grid.Row="2" Grid.Column="0"
+                Text="Got it! Dismiss this."
+                BackgroundColor="Transparent"
+                TextColor="#4CAF50"
+                FontAttributes="Bold"
+                HorizontalOptions="Start"/>
+            </Grid>
+        </Frame>
+
+        <!-- Workspace Section -->
+        <StackLayout>
+            <Label Text="Trello Workspace" FontSize="16" FontAttributes="Bold" TextColor="White" Margin="0,0,0,10"/>
+            <CollectionView ItemsSource="{Binding Boards}">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <StackLayout Orientation="Horizontal" Padding="10" Spacing="10">
+                            <BoxView WidthRequest="30" HeightRequest="30" BackgroundColor="{Binding Color}" CornerRadius="5"/>
+                            <Label Text="{Binding Title}" FontSize="14" TextColor="White" VerticalOptions="Center"/>
+                            <Switch IsToggled="{Binding IsSelected}" HorizontalOptions="EndAndExpand"/>
+                        </StackLayout>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </StackLayout>
+    </StackLayout>
+
+
+</ContentPage>

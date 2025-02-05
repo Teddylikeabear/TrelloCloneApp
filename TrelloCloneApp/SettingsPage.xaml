@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TrelloCloneApp.SettingsPage"
+             Shell.NavBarIsVisible="False"
+             Title="SettingsPage"
+             BackgroundColor="Black">
+
+
+    <ScrollView>
+        <StackLayout Padding="10" Spacing="20">
+            <!-- Notifications Section -->
+            <StackLayout Spacing="10">
+                <Label Text="Notifications" 
+                       FontSize="14" 
+                       TextColor="#AAAAAA"/>
+                <Label Text="Open system settings" 
+                       FontSize="16" 
+                       TextColor="White"/>
+            </StackLayout>
+
+            <!-- Application Theme Section -->
+            <StackLayout Spacing="10">
+                <Label Text="Application theme" 
+                       FontSize="14" 
+                       TextColor="#AAAAAA"/>
+                <Label Text="Select theme" 
+                       FontSize="16" 
+                       TextColor="White"/>
+            </StackLayout>
+
+            <!-- Accessibility Section -->
+            <StackLayout Spacing="10">
+                <Label Text="Accessibility" 
+                       FontSize="14" 
+                       TextColor="#AAAAAA"/>
+                <Grid RowDefinitions="Auto" ColumnDefinitions="*,Auto">
+                    <Label Text="Color blind friendly mode" 
+                           FontSize="16" 
+                           TextColor="White"
+                           VerticalTextAlignment="Center"/>
+                    <Switch IsToggled="False" 
+                            Grid.Column="1" 
+                            VerticalOptions="Center"/>
+                </Grid>
+                <Grid RowDefinitions="Auto" ColumnDefinitions="*,Auto">
+                    <Label Text="Enable animations" 
+                           FontSize="16" 
+                           TextColor="White"
+                           VerticalTextAlignment="Center"/>
+                    <Switch IsToggled="True" 
+                            Grid.Column="1" 
+                            VerticalOptions="Center"/>
+                </Grid>
+                <Grid RowDefinitions="Auto" ColumnDefinitions="*,Auto">
+                    <Label Text="Show label names on card front" 
+                           FontSize="16" 
+                           TextColor="White"
+                           VerticalTextAlignment="Center"/>
+                    <Switch IsToggled="False" 
+                            Grid.Column="1" 
+                            VerticalOptions="Center"/>
+                </Grid>
+            </StackLayout>
+
+            <!-- Sync Section -->
+            <StackLayout Spacing="10">
+                <Label Text="Sync" 
+                       FontSize="14" 
+                       TextColor="#AAAAAA"/>
+                <Label Text="Sync queue" 
+                       FontSize="16" 
+                       TextColor="White"/>
+            </StackLayout>
+
+            <!-- General Section -->
+            <StackLayout Spacing="10">
+                <Label Text="General" 
+                       FontSize="14" 
+                       TextColor="#AAAAAA"/>
+                <Label Text="Profile and visibility" 
+                       FontSize="16" 
+                       TextColor="White"/>
+                <Label Text="Set app language" 
+                       FontSize="16" 
+                       TextColor="White"/>
+                <Label Text="Delete account" 
+                       FontSize="16" 
+                       TextColor="White"/>
+                <Label Text="About Trello" 
+                       FontSize="16" 
+                       TextColor="White"/>
+                <Label Text="More Atlassian apps" 
+                       FontSize="16" 
+                       TextColor="White"/>
+                <Label Text="Contact support" 
+                       FontSize="16" 
+                       TextColor="White"/>
+                <StackLayout>
+                    <Label Text="Manage accounts on browser" 
+                           FontSize="16" 
+                           TextColor="White"/>
+                    <Label Text="Review logged in accounts and remove from browser" 
+                           FontSize="14" 
+                           TextColor="#AAAAAA"/>
+                </StackLayout>
+                <Label Text="Log out" 
+                       FontSize="16" 
+                       TextColor="White"/>
+            </StackLayout>
+        </StackLayout>
+    </ScrollView>
+
+</ContentPage>

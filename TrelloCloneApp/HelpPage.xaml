@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TrelloCloneApp.HelpPage"
+             Shell.NavBarIsVisible="False"
+             Title="Trello Android App"
+             BackgroundColor="#1E1E1E">
+
+    <ScrollView>
+        <Grid RowDefinitions="Auto" ColumnDefinitions="*,*" Padding="10">
+            <!-- FAQs Section -->
+            <StackLayout Grid.Column="0" Spacing="10">
+                <Label Text="🙋‍♂️🤓 How do I...? (FAQs)"
+                       FontSize="18"
+                       TextColor="White"
+                       FontAttributes="Bold"
+                       Margin="0,0,0,10"/>
+                <CollectionView ItemsSource="{Binding FAQs}">
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate>
+                            <Frame BackgroundColor="#292929" CornerRadius="10" Padding="10" Margin="0,5">
+                                <StackLayout Orientation="Horizontal">
+                                    <Label Text="{Binding Title}" FontSize="14" TextColor="White"/>
+                                    <StackLayout Orientation="Horizontal" HorizontalOptions="EndAndExpand" Spacing="5">
+                                        <Label Text="👍" FontSize="12" TextColor="#AAAAAA"/>
+                                        <Label Text="{Binding Likes}" FontSize="12" TextColor="#AAAAAA"/>
+                                    </StackLayout>
+                                </StackLayout>
+                            </Frame>
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+                </CollectionView>
+            </StackLayout>
+
+            <!-- Feedback Section -->
+            <StackLayout Grid.Column="1" Spacing="10">
+                <Label Text="🙈🙉🙊 Feedback
+                                            ."
+                       FontSize="18"
+                       TextColor="White"
+                       FontAttributes="Bold"
+                       Margin="0,0,0,10"/>
+                <CollectionView ItemsSource="{Binding Feedback}">
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate>
+                            <Frame BackgroundColor="#292929" CornerRadius="10" Padding="10" Margin="0,5">
+                                <StackLayout Orientation="Horizontal">
+                                    <Image Source="{Binding Icon}" HeightRequest="20" WidthRequest="20"/>
+                                    <Label Text="{Binding Title}" FontSize="14" TextColor="White" Margin="10,0,0,0"/>
+                                </StackLayout>
+                            </Frame>
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+                </CollectionView>
+            </StackLayout>
+        </Grid>
+    </ScrollView>
+
+</ContentPage>
